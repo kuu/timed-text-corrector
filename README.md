@@ -4,17 +4,19 @@ REST APIs for correcting the results from the speech-to-text services by using e
 ## APIs
 | Method | Path                   | Description   | Request body | Response JSON Format  |
 | ------ | ---------------------- | ------------- | ------------- | ------------- |
-| PUT    | /api/transcript/:assetId     | Registers a transcript for an asset  | "Transcript text" |  - |
+| POST   | /api/transcript        | Adds a transcript for an asset  | {id: assetId, text: "Transcript text"} |  - |
 | GET    | /api/transcript/:assetId     | Retrieves a transcript               | - | ["Sentence"] |
 | DELETE | /api/transcript/:assetId     | Deletes a transcript                 | - | - |
-| POST   | /api/timedtext               | Corrects a timed text                | {depends on the speech-to-text service} |  "Job ID" |
-| GET    | /api/timedtext/:jobId/state | Retrieves a timed text state          | - | {Either "Processing", "Processed", or "Failed"} |
-| GET    | /api/timedtext/:jobId       | Retrieves a timed text                | - | {id: assetId, state: {Either "Processing", "Processed", or "Failed"}, lines: [{time: "hh:mm:ss", text: "text"}]} |
+| POST   | /api/timedtext               | Corrects a timed text                | {id: assetId, data: depends on the speech-to-text service} |  "Job ID" |
+| GET    | /api/timedtext/:jobId/state | Retrieves a timed text state          | - | {Either "processing", "processed", or "failed"} |
+| GET    | /api/timedtext/:jobId       | Retrieves a timed text                | - | {id: assetId, state: state, data: 'TTML text'} |
 | DELETE | /api/timedtext/:jobId       | Deletes a timed text                  | - | - |
 | GET    | /api/timedtext/all/:assetId | Retrieves all timed text for an asset | - | ["Job ID"] |
 
+
 ## Install
 * Install [Node.js](https://nodejs.org/)
+* Install [Docker](https://www.docker.com/)
 * Clone source code and install dependencies
 
 ```
@@ -23,11 +25,17 @@ $ cd timed-text-corrector
 $ npm install
 ```
 
+## Run DB
+```
+$ mkdir data
+$ docker run -d --name mongo -p 27017:27017 -v `pwd`/data:/data mongo
+```
+
 ## Run
 * Start the server with specifying port number (the default port is 3000)
 
 ```
-$ PORT={port number} npm start
+$ PORT=3002 npm start
 ```
 
 * Now you can access the APIs

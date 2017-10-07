@@ -1,6 +1,6 @@
 {
   "name": "timed-text-corrector",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "REST APIs for correcting the results from the speech-to-text services by using existing human-written transcripts",
   "main": "index.js",
   "private": true,
@@ -10,7 +10,8 @@
     "start": "forever start -o server.log -e error.log ./bin/entry.js",
     "stop": "forever stop ./bin/entry.js",
     "debug": "node-debug ./bin/cli.js --debug-brk",
-    "test": "npm run lint && nsp check && ava --verbose"
+    "test": "npm run lint && ava --verbose",
+    "test-prod": "npm run lint && nsp check && ava --verbose"
   },
   "repository": {
     "type": "git",
@@ -25,17 +26,21 @@
   "homepage": "https://github.com/kuu/timed-text-corrector#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "config": "^1.26.2",
     "cookie-parser": "^1.4.3",
     "debug": "^3.1.0",
     "express": "^4.16.1",
     "forever": "^0.15.3",
-    "jade": "^1.11.0",
+    "mongoose": "^4.12.0",
     "morgan": "^1.9.0",
-    "serve-favicon": "^2.4.5"
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5",
+    "ttml": "^0.1.0"
   },
   "devDependencies": {
     "ava": "^0.22.0",
     "nsp": "^2.8.1",
+    "proxyquire": "^1.8.0",
     "supertest": "^3.0.0",
     "xo": "^0.18.2"
   },
