@@ -4,7 +4,7 @@ const timedtext = require('../models/timedtext');
 const transcript = require('../models/transcript');
 
 transcript.add('05dTl3YzE6gkKPU35hdAIpI3WwszlHzm', require('./dummy-transcript.json'));
-transcript.add('05dTl3YzE6gkKPU35hdAIpI3WwszlHzm', require('./dummy-transcript-02.json'));
+transcript.add('lxYjN5YzE6uh_xH3qoshLPi23u8rWOSc', require('./dummy-transcript-02.json'));
 
 const ttObjList = {};
 ttObjList['05dTl3YzE6gkKPU35hdAIpI3WwszlHzm'] = require('./dummy-timedtext.json');
