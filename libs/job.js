@@ -30,8 +30,8 @@ if (process.env.TTC_DUMMY) {
 
 function startJobDummy(jobId) {
   return timedtext.find(jobId)
-  .then(({assetId}) => {
-    const data = require(`../dummy/timedtext/${assetId}.json`);
+  .then(() => {
+    const data = require(`../dummy/timedtext/Mary_Elizabeth_Winstead.json`);
     if (!data) {
       throw new Error('No dummy timedtext data!');
     }
