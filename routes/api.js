@@ -4,6 +4,7 @@ const debug = require('debug')('ttc');
 const transcript = require('../models/transcript');
 const timedtext = require('../models/timedtext');
 const job = require('../libs/job');
+const {formatAzureVideoIndexer} = require('../libs/util');
 
 const router = express.Router();
 
@@ -74,9 +75,14 @@ router.post('/timedtext', (req, res) => {
   }
   const jobId = crypto.randomBytes(20).toString('hex');
   const assetId = obj.id;
-  const data = obj.data;
+  const service = obj.service || 'VI';
+  if (service !== 'VI') {
+    return res.status(400).send(`Such speech-to-text is not supported: ${service}`);
+  }
+  const data = formatAzureVideoIndexer(obj.data);
   debug('\t{');
   debug(`\t\tid: ${assetId},`);
+  debug(`\t\tservice: ${service}`);
   debug(`\t\tdata: "${data}"`);
   debug('\t}');
   timedtext.add(jobId, assetId, data).then(() => {

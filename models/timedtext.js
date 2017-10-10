@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const debug = require('debug')('ttc');
 const db = require('../libs/db');
 const util = require('../libs/util');
-const transcript = require('./transcript');
 
 const Schema = mongoose.Schema;
 
@@ -19,6 +18,7 @@ function find(jobId) {
       if (err) {
         return reject(err);
       }
+      debug(`timedtext.find: Found a job: ${jobId}`);
       resolve(data);
     });
   });
@@ -58,22 +58,17 @@ function _save(doc) {
 }
 
 function add(jobId, assetId, data) {
-  return transcript.find(assetId).then(text => {
-    if (!text) {
-      throw new Error(`No transcript for such asset: ${assetId}`);
-    }
-    const list = util.formalizeTimedText(data);
-    if (!list) {
-      throw new Error(`Invalid Timed Text: ${data}`);
-    }
-    debug(`Insert ${assetId} with ${list.length} lines`);
-    const timedtext = new TimedText({
-      jobId,
-      assetId,
-      data: list
-    });
-    return _save(timedtext);
+  const tt = util.formalizeTimedText(data);
+  if (!tt) {
+    throw new Error(`Invalid Timed Text: ${data}`);
+  }
+  debug(`timedtext.add: Insert a job ${jobId} for asset ${assetId}`);
+  const timedtext = new TimedText({
+    jobId,
+    assetId,
+    data: tt
   });
+  return _save(timedtext);
 }
 
 function remove(jobId) {
@@ -82,6 +77,7 @@ function remove(jobId) {
       if (err) {
         return reject(err);
       }
+      debug(`timedtext.remove: Deleted a job: ${jobId}`);
       resolve();
     });
   });
@@ -92,7 +88,7 @@ function update(jobId, state, data) {
     if (!doc) {
       throw new Error();
     }
-    debug(`Update ${jobId} with new state ${state}`);
+    debug(`timedtext.update: Updated ${jobId} with new state ${state}`);
     return _update(doc, {state, data});
   });
 }

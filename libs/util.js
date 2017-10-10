@@ -1,3 +1,20 @@
+function hasOwnProp(obj, propName) {
+  return Object.hasOwnProperty.call(obj, propName);
+}
+
+function safePropAccess(obj, nestedPropName) {
+  if (!nestedPropName) {
+    return undefined;
+  }
+  const propList = nestedPropName.split('.');
+  return propList.reduce((o, prop) => {
+    if (!o || !hasOwnProp(o, prop)) {
+      return undefined;
+    }
+    return o[prop];
+  }, obj);
+}
+
 function formalizeTranscript(str) {
   if (!str || typeof str !== 'string') {
     return [];
@@ -6,29 +23,44 @@ function formalizeTranscript(str) {
   return str.replace(/([.?!])\s*(?=[A-Z])/g, '$1^').split('^');
 }
 
-function formalizeTimedText() {
-  return [];
+function formalizeTimedText(data) {
+  return data;
+}
+
+function THROW(err) {
+  throw err;
+}
+
+function THROW_INVALID_FORMAT(msg) {
+  THROW(new TypeError(`Invalid data format: ${msg}`));
 }
 
 function formatAzureVideoIndexer(srcData, language) {
-  if (!Array.isArray(srcData)) {
-    throw new TypeError('Invalid data format: Azure Video Indexer');
+  const srcBreakdownList = safePropAccess(srcData, 'breakdowns');
+  if (!srcBreakdownList || !Array.isArray(srcBreakdownList)) {
+    THROW_INVALID_FORMAT('Azure Video Indexer');
   }
   const destLines = [];
-  for (const {lines} of srcData) {
-    if (!lines || !lines.length) {
-      continue;
+  for (const srcBreakdown of srcBreakdownList) {
+    const srcLines = safePropAccess(srcBreakdown, 'insights.transcriptBlocks');
+    if (!srcLines || !Array.isArray(srcLines)) {
+      THROW_INVALID_FORMAT('Azure Video Indexer');
     }
-    for (const srcObj of lines) {
-      const timeRange = srcObj.timeRange || srcObj.adjustedTimeRange;
-      if (!timeRange || !timeRange.start || !timeRange.end) {
+    for (const {lines} of srcLines) {
+      if (!lines || !lines.length) {
         continue;
       }
-      destLines.push({
-        start: timeRange.start,
-        end: timeRange.end,
-        text: srcObj.text
-      });
+      for (const srcObj of lines) {
+        const timeRange = srcObj.timeRange || srcObj.adjustedTimeRange;
+        if (!timeRange || !timeRange.start || !timeRange.end) {
+          continue;
+        }
+        destLines.push({
+          start: timeRange.start,
+          end: timeRange.end,
+          text: srcObj.text
+        });
+      }
     }
   }
   const destObj = {
@@ -41,6 +73,8 @@ function formatAzureVideoIndexer(srcData, language) {
 }
 
 module.exports = {
+  hasOwnProp,
+  safePropAccess,
   formalizeTranscript,
   formalizeTimedText,
   formatAzureVideoIndexer

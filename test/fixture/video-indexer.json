@@ -1,0 +1,770 @@
+{
+    "accountId": "4e350047-0954-43d5-b873-1916dfa1e091",
+    "id": "250eb1de8f",
+    "partition": null,
+    "name": "Idina Menzel_Kuu.mp4",
+    "description": null,
+    "userName": "Kuu Miyazaki",
+    "createTime": "2017-10-04T09:26:55.9637135+00:00",
+    "organization": "",
+    "privacyMode": "Private",
+    "state": "Processed",
+    "isOwned": true,
+    "isEditable": false,
+    "isBase": true,
+    "durationInSeconds": 30,
+    "summarizedInsights": {
+        "name": "Idina Menzel_Kuu.mp4",
+        "shortId": "250eb1de8f",
+        "privacyMode": 0,
+        "duration": {
+            "time": "00:00:30",
+            "seconds": 30
+        },
+        "thumbnailUrl": "https://www.videoindexer.ai/api/Thumbnail/250eb1de8f/7ce85fc2-9f59-4f9f-aff6-9eb26ee9738d",
+        "faces": [
+            {
+                "id": 1222,
+                "shortId": "250eb1de8f",
+                "bingId": "a3c1b113-4ebf-578f-67ac-2500a5ddf791",
+                "confidence": 0.97492450475692749,
+                "name": "Idina Menzel",
+                "description": "Idina Kim Menzel is an American actress, singer, and songwriter. Menzel rose to prominence when she originated the role of Maureen Johnson in the Broadway musical Rent. Her performance earned her a Tony Award nomination in 1996. She reprised the role in the musical's 2005 film adaptation. In 2003, …",
+                "title": "American Actress",
+                "thumbnailUrl": "/api/Thumbnail/250eb1de8f/83252de7-0cb5-46c3-bd31-f45d32fc7337",
+                "thumbnailFullUrl": "https://www.videoindexer.ai/api/Thumbnail/250eb1de8f/83252de7-0cb5-46c3-bd31-f45d32fc7337",
+                "appearances": [
+                    {
+                        "startTime": "00:00:00.1330000",
+                        "endTime": "00:00:30",
+                        "startSeconds": 0.1,
+                        "endSeconds": 30
+                    }
+                ],
+                "seenDuration": 29.9,
+                "seenDurationRatio": 0.99666666666666659
+            }
+        ],
+        "topics": [
+            {
+                "name": "exhilarating adrenaline rush",
+                "appearances": [
+                    {
+                        "startTime": "00:00:19.1900000",
+                        "endTime": "00:00:00",
+                        "startSeconds": 19.2,
+                        "endSeconds": 0
+                    }
+                ],
+                "isTranscript": true,
+                "id": 13
+            },
+            {
+                "name": "bunch of people",
+                "appearances": [
+                    {
+                        "startTime": "00:00:10.4300000",
+                        "endTime": "00:00:00",
+                        "startSeconds": 10.4,
+                        "endSeconds": 0
+                    }
+                ],
+                "isTranscript": true,
+                "id": 8
+            },
+            {
+                "name": "rve nATlons",
+                "appearances": [
+                    {
+                        "startTime": "00:00:27.5610000",
+                        "endTime": "00:00:00",
+                        "startSeconds": 27.6,
+                        "endSeconds": 0
+                    }
+                ],
+                "isTranscript": false,
+                "id": 16
+            }
+        ],
+        "sentiments": [
+            {
+                "sentimentKey": "Neutral",
+                "appearances": [
+                    {
+                        "startTime": "00:00:00",
+                        "endTime": "00:00:03.6100000",
+                        "startSeconds": 0,
+                        "endSeconds": 3.6
+                    }
+                ],
+                "seenDurationRatio": 0.12033333333333333
+            },
+            {
+                "sentimentKey": "Negative",
+                "appearances": [
+                    {
+                        "startTime": "00:00:03.6100000",
+                        "endTime": "00:00:30",
+                        "startSeconds": 3.6,
+                        "endSeconds": 30
+                    }
+                ],
+                "seenDurationRatio": 0.87966666666666671
+            }
+        ],
+        "audioEffects": [
+            {
+                "audioEffectKey": "Speech",
+                "appearances": [
+                    {
+                        "startTime": "00:00:03.6100000",
+                        "endTime": "00:00:27.4200000",
+                        "startSeconds": 3.6,
+                        "endSeconds": 27.4
+                    }
+                ],
+                "seenDurationRatio": 0.79333333333333322,
+                "seenDuration": 23.799999999999997
+            },
+            {
+                "audioEffectKey": "Silence",
+                "appearances": [
+                    {
+                        "startTime": "00:00:00",
+                        "endTime": "00:00:03.6100000",
+                        "startSeconds": 0,
+                        "endSeconds": 3.6
+                    }
+                ],
+                "seenDurationRatio": 0.12000000000000001,
+                "seenDuration": 3.6
+            }
+        ],
+        "annotations": [
+            {
+                "name": "person",
+                "appearances": [
+                    {
+                        "startTime": "00:00:01.1340000",
+                        "endTime": "00:00:27.8270000",
+                        "startSeconds": 1.1,
+                        "endSeconds": 27.8
+                    }
+                ]
+            },
+            {
+                "name": "indoor",
+                "appearances": [
+                    {
+                        "startTime": "00:00:06.4720000",
+                        "endTime": "00:00:09.6760000",
+                        "startSeconds": 6.5,
+                        "endSeconds": 9.7
+                    },
+                    {
+                        "startTime": "00:00:12.8790000",
+                        "endTime": "00:00:16.0820000",
+                        "startSeconds": 12.9,
+                        "endSeconds": 16.1
+                    },
+                    {
+                        "startTime": "00:00:20.3530000",
+                        "endTime": "00:00:21.4210000",
+                        "startSeconds": 20.4,
+                        "endSeconds": 21.4
+                    },
+                    {
+                        "startTime": "00:00:26.7590000",
+                        "endTime": "00:00:27.8270000",
+                        "startSeconds": 26.8,
+                        "endSeconds": 27.8
+                    }
+                ]
+            },
+            {
+                "name": "woman",
+                "appearances": [
+                    {
+                        "startTime": "00:00:01.1340000",
+                        "endTime": "00:00:03.2690000",
+                        "startSeconds": 1.1,
+                        "endSeconds": 3.3
+                    }
+                ]
+            }
+        ]
+    },
+    "breakdowns": [
+        {
+            "accountId": "4e350047-0954-43d5-b873-1916dfa1e091",
+            "id": "250eb1de8f",
+            "state": "Processed",
+            "processingProgress": "10%",
+            "failureCode": "General",
+            "failureMessage": "",
+            "externalId": "05dTl3YzE6gkKPU35hdAIpI3WwszlHzm",
+            "externalUrl": null,
+            "metadata": null,
+            "insights": {
+                "transcriptBlocks": [
+                    {
+                        "id": 0,
+                        "lines": [
+                            {
+                                "id": 0,
+                                "timeRange": {
+                                    "start": "00:00:00",
+                                    "end": "00:00:03.6100000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:00",
+                                    "end": "00:00:03.6100000"
+                                },
+                                "participantId": -2,
+                                "text": "",
+                                "isIncluded": true,
+                                "confidence": 1
+                            }
+                        ],
+                        "sentimentIds": [],
+                        "thumbnailsIds": [],
+                        "sentiment": 0,
+                        "faces": [
+                            {
+                                "id": 1222,
+                                "thumbnailId": "83252de7-0cb5-46c3-bd31-f45d32fc7337",
+                                "ranges": [
+                                    {
+                                        "timeRange": {
+                                            "start": "00:00:00.1330000",
+                                            "end": "00:00:03.6100000"
+                                        },
+                                        "adjustedTimeRange": {
+                                            "start": "00:00:00.1330000",
+                                            "end": "00:00:03.6100000"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "ocrs": [
+                            {
+                                "timeRange": {
+                                    "start": "00:00:01.9690000",
+                                    "end": "00:00:03.9370000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:01.9690000",
+                                    "end": "00:00:03.6100000"
+                                },
+                                "lines": [
+                                    {
+                                        "id": 0,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "Q AND A",
+                                        "confidence": 453.4
+                                    },
+                                    {
+                                        "id": 1,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "HOW TOURING",
+                                        "confidence": 514.2
+                                    },
+                                    {
+                                        "id": 2,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "FROM BROADWAY",
+                                        "confidence": 517.69230769230774
+                                    },
+                                    {
+                                        "id": 3,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "GET TICKETS NOW",
+                                        "confidence": 446.30769230769238
+                                    }
+                                ]
+                            }
+                        ],
+                        "audioEffectInstances": [
+                            {
+                                "type": 4,
+                                "ranges": []
+                            },
+                            {
+                                "type": 5,
+                                "ranges": [
+                                    {
+                                        "type": 5,
+                                        "timeRange": {
+                                            "start": "00:00:00",
+                                            "end": "00:00:03.6100000"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "scenes": [
+                            {
+                                "id": 0,
+                                "timeRange": {
+                                    "start": "00:00:00",
+                                    "end": "00:00:03.0690000"
+                                },
+                                "keyFrame": "00:00:00.6670000",
+                                "shots": [
+                                    {
+                                        "id": 0,
+                                        "timeRange": {
+                                            "start": "00:00:00",
+                                            "end": "00:00:03.0690000"
+                                        },
+                                        "keyFrame": "00:00:00.6670000"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 1,
+                                "timeRange": {
+                                    "start": "00:00:03.0690000",
+                                    "end": "00:00:03.6100000"
+                                },
+                                "keyFrame": "00:00:09.3430000",
+                                "shots": [
+                                    {
+                                        "id": 1,
+                                        "timeRange": {
+                                            "start": "00:00:03.0690000",
+                                            "end": "00:00:03.6100000"
+                                        },
+                                        "keyFrame": "00:00:03.6370000"
+                                    }
+                                ]
+                            }
+                        ],
+                        "annotations": [
+                            {
+                                "name": "person",
+                                "timeRanges": [
+                                    {
+                                        "start": "00:00:01.1340000",
+                                        "end": "00:00:02.2020000"
+                                    },
+                                    {
+                                        "start": "00:00:03.2690000",
+                                        "end": "00:00:03.6100000"
+                                    }
+                                ],
+                                "adjustedTimeRanges": [
+                                    {
+                                        "start": "00:00:01.1340000",
+                                        "end": "00:00:02.2020000"
+                                    },
+                                    {
+                                        "start": "00:00:03.2690000",
+                                        "end": "00:00:03.6100000"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "woman",
+                                "timeRanges": [
+                                    {
+                                        "start": "00:00:01.1340000",
+                                        "end": "00:00:03.2690000"
+                                    }
+                                ],
+                                "adjustedTimeRanges": [
+                                    {
+                                        "start": "00:00:01.1340000",
+                                        "end": "00:00:03.2690000"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "lines": [
+                            {
+                                "id": 1,
+                                "timeRange": {
+                                    "start": "00:00:03.6100000",
+                                    "end": "00:00:06.5100000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:03.6100000",
+                                    "end": "00:00:06.5100000"
+                                },
+                                "participantId": 1,
+                                "text": "The nuns w**** doesn't differ that much from being on Broadway.",
+                                "isIncluded": true,
+                                "confidence": 0.90909090909090906
+                            },
+                            {
+                                "id": 2,
+                                "timeRange": {
+                                    "start": "00:00:06.5100000",
+                                    "end": "00:00:08.2000000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:06.5100000",
+                                    "end": "00:00:08.2000000"
+                                },
+                                "participantId": 1,
+                                "text": "It shows a week. They're both a grind.",
+                                "isIncluded": true,
+                                "confidence": 0.79925
+                            },
+                            {
+                                "id": 3,
+                                "timeRange": {
+                                    "start": "00:00:08.2000000",
+                                    "end": "00:00:10.4300000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:08.2000000",
+                                    "end": "00:00:10.4300000"
+                                },
+                                "participantId": 1,
+                                "text": "They're both hard work. So I'll live performances.",
+                                "isIncluded": true,
+                                "confidence": 0.8125
+                            },
+                            {
+                                "id": 4,
+                                "timeRange": {
+                                    "start": "00:00:10.4300000",
+                                    "end": "00:00:16.8300000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:10.4300000",
+                                    "end": "00:00:16.8300000"
+                                },
+                                "participantId": 1,
+                                "text": "Sol putting yourself out there on a stage in front of a bunch of people that you're making yourself vulnerable in front of them for me,",
+                                "isIncluded": true,
+                                "confidence": 0.96153846153846156
+                            },
+                            {
+                                "id": 5,
+                                "timeRange": {
+                                    "start": "00:00:16.8300000",
+                                    "end": "00:00:19.1900000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:16.8300000",
+                                    "end": "00:00:19.1900000"
+                                },
+                                "participantId": 1,
+                                "text": "it's not that different it's it's got the same.",
+                                "isIncluded": true,
+                                "confidence": 1
+                            },
+                            {
+                                "id": 6,
+                                "timeRange": {
+                                    "start": "00:00:19.1900000",
+                                    "end": "00:00:27.4200000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:19.1900000",
+                                    "end": "00:00:27.4200000"
+                                },
+                                "participantId": 1,
+                                "text": "Fear in the same thrills in the same exhilarating adrenaline rush and it's just a matter of maybe pacing just a little different.",
+                                "isIncluded": true,
+                                "confidence": 0.93031328695652171
+                            },
+                            {
+                                "id": 7,
+                                "timeRange": {
+                                    "start": "00:00:27.4200000",
+                                    "end": "00:00:30"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:27.4200000",
+                                    "end": "00:00:30"
+                                },
+                                "participantId": 1,
+                                "text": "",
+                                "isIncluded": true,
+                                "confidence": 1
+                            }
+                        ],
+                        "sentimentIds": [],
+                        "thumbnailsIds": [],
+                        "sentiment": 0.0010384619235992432,
+                        "faces": [
+                            {
+                                "id": 1222,
+                                "thumbnailId": "9273dcd6-0eff-4f0f-afde-0ccb5eacf910",
+                                "ranges": [
+                                    {
+                                        "timeRange": {
+                                            "start": "00:00:03.6100000",
+                                            "end": "00:00:30"
+                                        },
+                                        "adjustedTimeRange": {
+                                            "start": "00:00:03.6100000",
+                                            "end": "00:00:30"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "ocrs": [
+                            {
+                                "timeRange": {
+                                    "start": "00:00:05.9060000",
+                                    "end": "00:00:27.5610000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:05.9060000",
+                                    "end": "00:00:27.5610000"
+                                },
+                                "lines": [
+                                    {
+                                        "id": 11,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "GET TICKETS NOW",
+                                        "confidence": 470.76352163461536
+                                    },
+                                    {
+                                        "id": 12,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "English",
+                                        "textData": "nanon",
+                                        "confidence": 279
+                                    }
+                                ]
+                            },
+                            {
+                                "timeRange": {
+                                    "start": "00:00:27.5610000",
+                                    "end": "00:00:29.5630000"
+                                },
+                                "adjustedTimeRange": {
+                                    "start": "00:00:27.5610000",
+                                    "end": "00:00:29.5630000"
+                                },
+                                "lines": [
+                                    {
+                                        "id": 29,
+                                        "width": 0,
+                                        "height": 0,
+                                        "language": "German",
+                                        "textData": "L-rve nATlons",
+                                        "confidence": 280.70833333333337
+                                    }
+                                ]
+                            }
+                        ],
+                        "audioEffectInstances": [
+                            {
+                                "type": 4,
+                                "ranges": [
+                                    {
+                                        "type": 4,
+                                        "timeRange": {
+                                            "start": "00:00:03.6100000",
+                                            "end": "00:00:27.4200000"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "scenes": [
+                            {
+                                "id": 1,
+                                "timeRange": {
+                                    "start": "00:00:03.6100000",
+                                    "end": "00:00:26.9260000"
+                                },
+                                "keyFrame": "00:00:09.3430000",
+                                "shots": [
+                                    {
+                                        "id": 1,
+                                        "timeRange": {
+                                            "start": "00:00:03.6100000",
+                                            "end": "00:00:09.0750000"
+                                        },
+                                        "keyFrame": "00:00:03.6370000"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "timeRange": {
+                                            "start": "00:00:09.0750000",
+                                            "end": "00:00:26.9260000"
+                                        },
+                                        "keyFrame": "00:00:09.3430000"
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 2,
+                                "timeRange": {
+                                    "start": "00:00:26.9260000",
+                                    "end": "00:00:30"
+                                },
+                                "keyFrame": "00:00:26.9940000",
+                                "shots": [
+                                    {
+                                        "id": 3,
+                                        "timeRange": {
+                                            "start": "00:00:26.9260000",
+                                            "end": "00:00:30"
+                                        },
+                                        "keyFrame": "00:00:26.9940000"
+                                    }
+                                ]
+                            }
+                        ],
+                        "annotations": [
+                            {
+                                "name": "person",
+                                "timeRanges": [
+                                    {
+                                        "start": "00:00:03.6100000",
+                                        "end": "00:00:27.8270000"
+                                    }
+                                ],
+                                "adjustedTimeRanges": [
+                                    {
+                                        "start": "00:00:03.6100000",
+                                        "end": "00:00:27.8270000"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "indoor",
+                                "timeRanges": [
+                                    {
+                                        "start": "00:00:06.4720000",
+                                        "end": "00:00:09.6760000"
+                                    },
+                                    {
+                                        "start": "00:00:12.8790000",
+                                        "end": "00:00:16.0820000"
+                                    },
+                                    {
+                                        "start": "00:00:20.3530000",
+                                        "end": "00:00:21.4210000"
+                                    },
+                                    {
+                                        "start": "00:00:26.7590000",
+                                        "end": "00:00:27.8270000"
+                                    }
+                                ],
+                                "adjustedTimeRanges": [
+                                    {
+                                        "start": "00:00:06.4720000",
+                                        "end": "00:00:09.6760000"
+                                    },
+                                    {
+                                        "start": "00:00:12.8790000",
+                                        "end": "00:00:16.0820000"
+                                    },
+                                    {
+                                        "start": "00:00:20.3530000",
+                                        "end": "00:00:21.4210000"
+                                    },
+                                    {
+                                        "start": "00:00:26.7590000",
+                                        "end": "00:00:27.8270000"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "topics": [
+                    {
+                        "id": 16,
+                        "name": "rve nATlons",
+                        "stem": "rve nATlons",
+                        "words": [
+                            "rve nATlons"
+                        ],
+                        "rank": 0.85804235370190751
+                    },
+                    {
+                        "id": 13,
+                        "name": "exhilarating adrenaline rush",
+                        "stem": "exhilarating adrenaline rush",
+                        "words": [
+                            "exhilarating adrenaline rush"
+                        ],
+                        "rank": 0.51883808392995212
+                    },
+                    {
+                        "id": 8,
+                        "name": "bunch of people",
+                        "stem": "bunch of people",
+                        "words": [
+                            "bunch of people"
+                        ],
+                        "rank": 0.15374730234803263
+                    }
+                ],
+                "faces": [
+                    {
+                        "id": 1222,
+                        "bingId": "a3c1b113-4ebf-578f-67ac-2500a5ddf791",
+                        "name": "Idina Menzel",
+                        "thumbnailId": "83252de7-0cb5-46c3-bd31-f45d32fc7337",
+                        "description": "Idina Kim Menzel is an American actress, singer, and songwriter. Menzel rose to prominence when she originated the role of Maureen Johnson in the Broadway musical Rent. Her performance earned her a Tony Award nomination in 1996. She reprised the role in the musical's 2005 film adaptation. In 2003, …",
+                        "title": "American Actress",
+                        "imageUrl": "https://www.bing.com/th?id=A78c5ffb3ad2762a26db7e3d7b7fb919c&c=12&rs=1&qlt=80&cdv=1&pid=16.2",
+                        "confidence": 0.97492450475692749,
+                        "knownPersonId": "00000000-0000-0000-0000-000000000000"
+                    }
+                ],
+                "participants": [
+                    {
+                        "id": 1,
+                        "name": "Speaker #1",
+                        "pictureUrl": null
+                    }
+                ],
+                "contentModeration": {
+                    "adultClassifierValue": 0.23887,
+                    "bannedWordsCount": 0,
+                    "bannedWordsRatio": 0,
+                    "isSuspectedAsAdult": false,
+                    "isAdult": false
+                },
+                "audioEffectsCategories": [
+                    {
+                        "type": 5,
+                        "key": "Silence"
+                    },
+                    {
+                        "type": 4,
+                        "key": "Speech"
+                    }
+                ]
+            },
+            "thumbnailUrl": "https://www.videoindexer.ai/api/Thumbnail/250eb1de8f/7ce85fc2-9f59-4f9f-aff6-9eb26ee9738d",
+            "publishedUrl": "https://rodmandev.streaming.mediaservices.windows.net:443/0adeb939-8a22-4c87-b0f6-8ce8d53aaa79/Idina%20Menzel_Kuump4.ism/manifest",
+            "viewToken": "Bearer=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cm46bWljcm9zb2Z0OmF6dXJlOm1lZGlhc2VydmljZXM6Y29udGVudGtleWlkZW50aWZpZXIiOiIxYzNiMGEzOC1lMDZkLTQwYTYtOGJlMC1lYjljNzRmMTk3YWYiLCJpc3MiOiJodHRwczovL2JyZWFrZG93bi5tZSIsImF1ZCI6IkJyZWFrZG93blVzZXIiLCJleHAiOjE1MDc0Nzg3OTEsIm5iZiI6MTUwNzM5MjMzMX0.23USiKelTYEXxmReuR6KPNPov13r6DJvIjLJT_jFOHU",
+            "sourceLanguage": "en-US",
+            "language": "en-US"
+        }
+    ],
+    "social": {
+        "likedByUser": false,
+        "likes": 0,
+        "views": 0
+    }
+}

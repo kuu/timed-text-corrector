@@ -1,6 +1,7 @@
 const test = require('ava');
 const request = require('supertest');
 const proxyquire = require('proxyquire');
+const videoIndexerResponse = require('../fixture/video-indexer.json');
 
 test.beforeEach(() => {
   delete require.cache[require.resolve('../../app')];
@@ -32,7 +33,7 @@ test('[POST]/timedtext:write-error', async t => {
   };
   const mockApi = proxyquire('../../routes/api', {'../models/timedtext': mockTimedText});
   const app = proxyquire('../../app', {'./routes/api': mockApi});
-  const res = await request(app).post('/api/timedtext/').send({id: 'abc', data: {}});
+  const res = await request(app).post('/api/timedtext/').send({id: 'abc', data: videoIndexerResponse});
   t.is(res.status, 500);
 });
 
@@ -44,6 +45,6 @@ test('[POST]/timedtext:success', async t => {
   };
   const mockApi = proxyquire('../../routes/api', {'../models/timedtext': mockTimedText});
   const app = proxyquire('../../app', {'./routes/api': mockApi});
-  const res = await request(app).post('/api/timedtext/').send({id: 'abc', data: {}});
+  const res = await request(app).post('/api/timedtext/').send({id: 'abc', data: videoIndexerResponse});
   t.is(res.status, 200);
 });

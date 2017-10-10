@@ -16,6 +16,7 @@ function find(assetId) {
       if (err) {
         return reject(err);
       }
+      debug(`transcript.find: Found an asset: ${assetId}`);
       resolve(data);
     });
   });
@@ -49,7 +50,7 @@ function add(assetId, text) {
       throw new Error(assetId);
     }
     const list = util.formalizeTranscript(text);
-    debug(`Update ${assetId} with ${list.length} lines`);
+    debug(`transcript.add: Update ${assetId} with ${list.length} lines`);
     return _update(doc, {text: list});
   })
   .catch(err => {
@@ -57,7 +58,7 @@ function add(assetId, text) {
       throw err;
     }
     const list = util.formalizeTranscript(text);
-    debug(`Insert ${assetId} with ${list.length} lines`);
+    debug(`transcript.add: Insert ${assetId} with ${list.length} lines`);
     const transcript = new Transcript({
       assetId,
       text: list
@@ -72,6 +73,7 @@ function remove(assetId) {
       if (err) {
         return reject(err);
       }
+      debug(`transcript.remove: Deleted an asset: ${assetId}`);
       resolve();
     });
   });

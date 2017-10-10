@@ -1,25 +1,42 @@
+const fs = require('fs');
+const path = require('path');
+const Fuse = require('fuse.js');
 const TTML = require('ttml');
 const debug = require('debug')('ttc');
 const timedtext = require('../models/timedtext');
 const transcript = require('../models/transcript');
+const util = require('../libs/util');
 
-transcript.add('05dTl3YzE6gkKPU35hdAIpI3WwszlHzm', require('./dummy-transcript.json'));
-transcript.add('lxYjN5YzE6uh_xH3qoshLPi23u8rWOSc', require('./dummy-transcript-02.json'));
+const fuseOptions = {
+  shouldSort: true,
+  includeScore: true,
+  threshold: 0.6,
+  location: 0,
+  distance: 100,
+  maxPatternLength: 32,
+  minMatchCharLength: 2
+};
 
-const ttObjList = {};
-ttObjList['05dTl3YzE6gkKPU35hdAIpI3WwszlHzm'] = require('./dummy-timedtext.json');
-ttObjList['lxYjN5YzE6uh_xH3qoshLPi23u8rWOSc'] = require('./dummy-timedtext-02.json');
+if (process.env.TTC_DUMMY) {
+  // Import dummy transcripts
+  const filenames = fs.readdirSync(path.join(__dirname, '../dummy/transcript'));
+  filenames.forEach(filename => {
+    if (filename.endsWith('.json')) {
+      const assetId = path.basename(filename, '.json');
+      transcript.add(assetId, require(`../dummy/transcript/${filename}`));
+    }
+  });
+}
 
-function startJob(jobId) {
-  timedtext.find(jobId)
-  .then(data => {
-    const assetId = data.assetId;
-    const dummyTTObj = ttObjList[assetId];
-    if (!dummyTTObj) {
-      throw new Error('No dummy timedtext object!');
+function startJobDummy(jobId) {
+  return timedtext.find(jobId)
+  .then(({assetId}) => {
+    const data = require(`../dummy/timedtext/${assetId}.json`);
+    if (!data) {
+      throw new Error('No dummy timedtext data!');
     }
     setTimeout(() => {
-      const ttml = TTML.stringify(dummyTTObj);
+      const ttml = TTML.stringify(data);
       timedtext.update(jobId, 'processed', ttml)
       .then(() => {
         debug(`Succeeded to update job: ${jobId}`);
@@ -31,6 +48,25 @@ function startJob(jobId) {
   });
 }
 
+function startJob(jobId) {
+  return timedtext.find(jobId)
+  .then(({assetId, data}) => {
+    if (!data) {
+      throw new Error('No timedtext data!');
+    }
+    transcript.find(assetId)
+    .then(({text}) => {
+      const fuse = new Fuse(text, fuseOptions);
+      const lines = util.safePropAccess(data, 'languages.en.lines');
+      for (const {text} of lines) {
+        const result = fuse.search(text);
+        // TODO
+        console.log(result);
+      }
+    });
+  });
+}
+
 module.exports = {
-  startJob
+  startJob: (process.env.TTC_DUMMY ? startJobDummy : startJob)
 };

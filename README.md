@@ -7,7 +7,7 @@ REST APIs for correcting the results from the speech-to-text services by using e
 | POST   | /api/transcript        | Adds a transcript for an asset  | {id: assetId, text: "Transcript text"} |  - |
 | GET    | /api/transcript/:assetId     | Retrieves a transcript               | - | ["Sentence"] |
 | DELETE | /api/transcript/:assetId     | Deletes a transcript                 | - | - |
-| POST   | /api/timedtext               | Corrects a timed text                | {id: assetId, data: depends on the speech-to-text service} |  "Job ID" |
+| POST   | /api/timedtext               | Corrects a timed text                | {id: assetId, service: "Video Indexer", data: depends on the speech-to-text service} |  "Job ID" |
 | GET    | /api/timedtext/:jobId/state | Retrieves a timed text state          | - | {Either "processing", "processed", or "failed"} |
 | GET    | /api/timedtext/:jobId       | Retrieves a timed text                | - | {id: assetId, state: state, data: 'TTML text'} |
 | DELETE | /api/timedtext/:jobId       | Deletes a timed text                  | - | - |
